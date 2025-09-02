@@ -3,7 +3,9 @@
 ## 3' UTR cleavage site identification from the Mouse Cell Atlas
 This reposistory hosts a Snakemake pipeline used to call 3' UTR cleavage sites *de novo* from [the Mouse Cell Atlas dataset](http://bis.zju.edu.cn/MCA/). The final output of the pipeline is the Mouse UTRome used in [the scUTRquant pipeline](https://github.com/Mayrlab/scUTRquant) for quantifying 3' UTR isoforms from scRNA-seq data.
 
-Please see [our accompanying *bioRxiv* manuscript](https://doi.org/10.1101/2021.11.22.469635).
+The accompanying manuscript is openly available at:
+
+> Fansler, M.M., Mitschka, S. & Mayr, C. Quantifying 3′UTR length from scRNA-seq data reveals changes independent of gene expression. *Nat Commun* **15**, 4050 (2024). [https://doi.org/10.1038/s41467-024-48254-9](https://doi.org/10.1038/s41467-024-48254-9)
 
 ## Requirements
 The original pipeline was run with 
@@ -18,7 +20,7 @@ Rule `resources:` values are compatible with [Snakemake profiles](https://github
 
 ## Running
 
-> ⚠️ This is not trivial pipeline! If you require scUTRquant (kallisto) indices with specific settings, please [file an Issue](https://github.com/Mayrlab/mca-utrome/issues) and we may be able to help generating this. For example, we may be able to provide intermediate files to "bootstrap" the pipeline and avoid downloading and aligning the raw data.
+> ⚠️ This is not a trivial pipeline! If you require scUTRquant (kallisto) indices with specific settings, please [file an Issue](https://github.com/Mayrlab/mca-utrome/issues) and we may be able to help generating this. For example, we may be able to provide intermediate files to "bootstrap" the pipeline and avoid downloading and aligning the raw data.
 
 After cloning this repository and adjusting the `config.yaml` to point at a local HISAT index (`hisatIndex`), all outputs for the UTRome can be generated with
 
